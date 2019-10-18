@@ -36,7 +36,7 @@ render() {
               this.state.topspots.map(topspot => (
                 <div className='card-body alert alert-dark' role='alert' key={topspot.id}>
                   <TopSpot 
-                    name={topspot.name}
+                     name={topspot.name}
                     description={topspot.description}
                     location={'https://maps.google.com/?q=' + topspot.location[0] + ',' +topspot.location[1]} 
                   />
