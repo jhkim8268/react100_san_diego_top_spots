@@ -24,17 +24,6 @@ describe('top spots', function () {
     nightmare = new Nightmare();
   });
 
-  it('should show a list of topspots as bootstrap wells', () =>
-    nightmare
-    .goto(url)
-    .wait('div.well')
-    .evaluate(() => document.querySelectorAll('div.well').length)
-    .end()
-    .then((numberOfTodoComponents) => {
-      expect(numberOfTodoComponents).to.equal(30);
-    })
-  ).timeout(nightmareTimeout);
-
   it('should show topspot name in each bootstrap well using a <h4> element.', () =>
     nightmare
     .goto(url)
